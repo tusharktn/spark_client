@@ -28,7 +28,7 @@ function Fields({
           if (customer._id !== receiverObj._id) {
             let customerBalance = Number(customer.balance) - Number(amount);
             let receiverAmount;
-            await fetch(`http://localhost:8000/${receiverObj._id}`)
+            await fetch(`https://sparkbankingapp.herokuapp.com/${receiverObj._id}`)
               .then((response) => response.json())
               .then((data) => {
                 receiverAmount = Number(data.balance) + Number(amount);
@@ -37,7 +37,7 @@ function Fields({
                 alert("Something went wrong");
               });
             await fetch(
-              `http://localhost:8000/${customer._id}/transaction/${receiverObj._id}/${customerBalance}/${receiverAmount}`
+              `https://sparkbankingapp.herokuapp.com/${customer._id}/transaction/${receiverObj._id}/${customerBalance}/${receiverAmount}`
             )
               .then((response) => response.json())
               .then((data) => {

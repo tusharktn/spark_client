@@ -11,7 +11,7 @@ function CustomTable() {
 
   useEffect(() => {
     const getCustomers = async () => {
-      await fetch("http://localhost:8000/")
+      await fetch("https://sparkbankingapp.herokuapp.com/")
         .then((response) => response.json())
         .then((data) => {
           setCustomers(data);
@@ -23,7 +23,7 @@ function CustomTable() {
 
   const onButtonClick = async (id) => {
     setShow(true);
-    await fetch(`http://localhost:8000/${id}`)
+    await fetch(`https://sparkbankingapp.herokuapp.com/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setCustomer(data);
