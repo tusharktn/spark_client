@@ -1,0 +1,51 @@
+.customTable {
+  margin: 15px 30px;
+}
+
+.customTable .customTable__table {
+  box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.7);
+}
+
+.customTable__modal__header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px !important;
+  padding-left: 25px !important;
+}
+
+.customTable__modal__title {
+  letter-spacing: 2px;
+}
+
+.customTable tr {
+  text-align: center;
+}
+
+.customTable .customTable__head {
+  color: #2196f3;
+  font-size: 20px;
+}
+
+@media (max-width: 500px) {
+  .customTable {
+    margin: 10px;
+  }
+  .customTable .customTable__head {
+    color: #2196f3;
+    font-size: 15px;
+  }
+  .customTable .customTable__body {
+    font-size: 13px;
+  }
+  .customTable .customTable__body .btn {
+    font-size: 12px;
+  }
+}
+
+.customTable__modal__body__fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
